@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - Q3 - Loja</title>
+</head>
+<body>
+
+
+    <script>
+
+        let valorProduto = parseFloat(prompt("Insira o valor do produto desejado: "));
+
+        let opcao1 = valorProduto - (valorProduto * 0.1);
+        let opcao2 = valorProduto / 2;
+        let opcao3 = valorProduto / 3;
+
+        document.write("Você pode pagar a vista com 10% de desconto por: " + opcao1.toFixed(2));
+        document.write("<br>");
+        document.write("Você pode pagar em até 2x sem juros com parcelas de: " + opcao2.toFixed(2));
+        document.write("<br>");
+        document.write("Você pode pagar em até 3x sem juros com parcelas de: " + opcao3.toFixed(2));        
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculo</title>
+
+    <style>
+        #body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            height: 98%;
+            margin-left: 25%;
+            margin-right: 25%;
+            padding: 10px;
+            min-width: 500px;
+            border: 5px solid rgba(111, 120, 131, 0.5);
+            border-radius: 10px;
+        }
+
+        #container {
+            display: flex;
+            width: 90%;
+            min-width: 500px;
+            flex-direction: column;
+
+        }
+
+        #container-perfil {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #perfil {
+            display: flex;
+            flex-direction: column;
+            font-family: sans-serif;
+            color: rgb(32, 111, 214);
+
+        }
+
+        #foto-perfil {
+            max-width: 150px;
+            max-height: 450px;
+            color: rgb(32, 111, 214);
+            margin: 15px;
+            border: 5px solid rgb(32, 111, 214);
+            border-radius: 150px;
+        }
+
+        .sub-temas {
+            color: rgb(32, 111, 214);
+            padding: 10px 10px 3px 3px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+            text-align: left;
+
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2px;
+        }
+
+        .item {
+
+            background-color: rgb(86, 193, 229);
+            text-align: center;
+            border-radius: 30px;
+            width: 150px;
+            height: 20px;
+        }
+
+        .line {
+            color: rgb(32, 111, 214);
+            border: 2px solid rgb(32, 111, 214);
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div id="body">
+
+        <h1 style="text-align: center; color: rgb(32, 111, 214);">Currículo - Igor Gutzeit Affonso</h1>
+
+        <div id="container">
+
+            <div id="container-perfil">
+                <div>
+                    <a href="https://www.linkedin.com/in/igor-gutzeit-0a967b282/">
+                        <img id="foto-perfil"
+                            src="https://img.freepik.com/vetores-premium/avatar-de-homem-barbudo-foto-generica-de-perfil-masculino_53562-20202.jpg?w=740"
+                            alt="Foto de Perfil" />
+                    </a>
+                </div>
+
+                <div id="perfil">
+                    <h2>
+                        Igor Gutzeit Affonso
+                    </h2>
+
+                    <h5>
+                        Desenvolvedor Junior
+                    </h5>
+
+                </div>
+            </div>
+
+            <div>
+                <hr class="line" />
+            </div>
+
+            <h3 class="sub-temas">Sobre mim</h3>
+            <p>
+                Sou um profissional com experiência em desenvolvimento JAVA para web
+                e algumas de suas tecnologias.
+                Estou sempre em busca de aprender coisas novas e novos desafios para
+                aprimorar minhas habilidades e para o meu crescimento e
+                desenvolvimento como profissional.
+            </p>
+            <br />
+            <br />
+
+
+            <h3 class="sub-temas">Experiência</h3>
+            <br />
+
+            <p><b>Empresa:</b> Netbiis</p>
+            <p>
+                <b>Cargo:</b> Suporte N1
+                <br />
+                <b>Período:</b> Março/2023 - Junho/2023
+                <br />
+                Atuou na equipe de suporte do aplicativo Igutemi One como Suporte N1 -
+                Primeira linha de suporte para a campanha Collections
+            </p>
+
+            <p>
+                <b>Cargo:</b> Desenvolvedor Adobe Campaign Junior
+                <br />
+                <b>Período:</b> Julho/2023 - Presente
+                <br />
+                Atua na área de automação de marketing operando na divisão dos dados para público alvo,
+                a construção e envio de diversas campanhas automatizadas com e-mails e pushes.
+            </p>
+            <br />
+
+
+            <h3 class="sub-temas">Educação</h3>
+            <p>
+                <b>Universidade da Amazônia - UNAMA</b>
+                <br />
+                <b>Curso:</b> Ciência da Computação
+                <br />
+                <b>Período:</b> 2019 - 2023
+            </p>
+            <br />
+
+
+            <h3 class="sub-temas">Habilidades</h3>
+            <div class="grid">
+                <div class="item">HTML & CSS</div>
+                <div class="item">JavaScript</div>
+                <div class="item">JAVA</div>
+                <div class="item">Hibernate</div>
+                <div class="item">Express.js</div>
+                <div class="item">MySQL</div>
+
+            </div>
+            <br />
+            <br />
+
+            <div>
+                <hr class="line" />
+            </div>
+
+            <h3 class="sub-temas">Contato</h3>
+            <p>
+                E-mail: gutzeit.igor18@gmail.com
+                <br />
+                <br />
+                Telefone: (91)99282-1331
+                <br />
+                <br />
+                LinkedIn: <a href="https://www.linkedin.com/in/igor-gutzeit-0a967b282/">Igor Gutzeit</a>
+            </p>
+            <br />
+
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
