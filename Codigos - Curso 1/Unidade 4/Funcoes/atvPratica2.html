@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atv. Pratica 2 - Unidade 4</title>
+</head>
+
+<body>
+
+    <h1 id="mensagem"></h1>
+
+    <script>
+
+        function mensagemUser() {
+            let msg = prompt("Escreva uma mensagem: ");
+            let msgColor = prompt("Digite a cor que deseja para a mensagem: ");
+            let bg_color = prompt("Escolha a cor do fundo da tela para exibir sua mensagem: ");
+
+            let bodyBackGround = document.querySelector("body");
+            bodyBackGround.style.backgroundColor = bg_color;
+
+            let messageColor = document.querySelector("h1");
+            messageColor.style.color = msgColor;
+
+            let mensagem = document.getElementById("mensagem");
+            return mensagem.innerText = msg;
+        }
+
+        mensagemUser();
+
+
+    </script>
+</body>
+
+</html>
