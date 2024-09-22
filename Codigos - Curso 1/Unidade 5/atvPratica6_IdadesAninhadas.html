@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6 - Idades Aninhadas</title>
+</head>
+<body>
+
+
+    <script>
+
+        let idade = parseInt(prompt("Informe a idade desejada: "));
+
+        if(idade <= 0){
+
+            document.write("A idade digitada não é válida");
+
+        }else if (idade > 0 && idade < 12){
+
+            document.write("Criança");
+
+        }else if (idade >= 12 && idade < 18){
+            
+            document.write("Adolescente");
+
+        }else if (idade >= 18 && idade < 65){
+            
+            document.write("Adulto");
+
+        }else if (idade >= 65 && idade <= 100){
+            
+            document.write("Idoso");
+
+        }else{
+            document.write("A idade digitada não é válida");
+        };
+
+    </script>
+    
+</body>
+</html>

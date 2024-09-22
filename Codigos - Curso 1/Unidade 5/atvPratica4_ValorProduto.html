@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4 - Valor Produto</title>
+</head>
+<body>
+
+
+    <script>
+
+        let valor = parseFloat(prompt("Informe o valor do produto: "));
+
+        if(valor > 100){
+
+            let valorDesconto = valor - (valor * 0.1);
+            document.write("Você recebeu 10% de desconto!! O valor a ser pago será de: " + valorDesconto);
+
+        }else if(valor <= 100 && valor > 0){
+
+            document.write("O valor a pagar é de: " + valor);
+
+        }else{
+
+            document.write("O valor inserido não é válido");
+            
+        };
+
+    </script>
+    
+</body>
+</html>
