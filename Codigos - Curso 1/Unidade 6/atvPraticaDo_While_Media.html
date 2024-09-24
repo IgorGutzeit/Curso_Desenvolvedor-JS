@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While - Media</title>
+</head>
+<body>
+    <h1 id="titulo">Media: </h1>
+
+
+    <script>
+
+        let num;
+        let result = 0;
+        let contador = 0;
+        let media;
+
+        function verificarNumero(num){
+            let numFloat = num;
+            if(isNaN(num) || num == 0){
+                return false;
+            } else {
+                contador++;
+                return numFloat;
+            };
+        };
+
+        function calcMedia(num1, num2){
+            return num1 / num2;
+        };
+
+        do{
+            
+            num = parseFloat(prompt("Digite a números diferentes de zero para continuar somando (Ao digitar zero a média dos números digitados é calculada): "));
+            
+            num = verificarNumero(num);
+            result = result + num;
+
+        } while (num != false);
+
+        media = calcMedia(result, contador);
+
+        document.getElementById("titulo").innerText += media.toFixed(2);
+
+
+    </script>
+
+</body>
+</html>

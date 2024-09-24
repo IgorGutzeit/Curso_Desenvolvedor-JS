@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While</title>
+</head>
+<body>
+    <h1 id="titulo">Nota: </h1>
+
+
+    <script>
+
+        let nota;
+
+        function verificarNota(nota){
+            let notaFloat = parseFloat(nota);
+            if(isNaN(nota) || nota < 0 || nota > 10){
+                return false;
+            } else {
+                return notaFloat;
+            };
+        };
+
+        do{
+            nota = prompt("Digite a nota do aluno: ");
+            nota = verificarNota(nota);
+        } while (nota == false);
+
+        document.getElementById("titulo").innerText += nota.toFixed(1);
+
+
+    </script>
+
+</body>
+</html>
