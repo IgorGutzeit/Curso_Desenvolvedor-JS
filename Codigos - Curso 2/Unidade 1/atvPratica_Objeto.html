@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atv Pratica - Objetos</title>
+</head>
+<body>
+
+    <script>
+
+        let nomeUser = prompt("Informe seu nome: ");
+        let idadeUser = parseInt(prompt("Informe sua idade: "));
+        let emailUser = prompt("Informe seu E-mail: ");
+
+        let usuario = {
+            nome: nomeUser,
+            idade: idadeUser,
+            email: emailUser
+        };
+
+        // console.log(usuario);
+
+        for(let key in usuario){
+            console.log(usuario[key]);
+        };
+
+    </script>
+    
+</body>
+</html>
