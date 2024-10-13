@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window - Screen</title>
+</head>
+<body>
+
+
+    <script>
+
+        window.alert("Olá, mundo!");
+        let confirme = window.confirm("Você confirma?");
+        console.log(confirme);
+        let nome = window.prompt("Digite seu some: ");
+        console.log(nome);
+
+
+        // Abre uma nova janela com o conteúdo passado
+        // window.open('https://www.google.com.br', '_blank', 'width=800', 'height=600');
+
+
+        // fecha a janela
+        // window.close();
+
+
+        // Dimensões da janela
+        console.log("Largura da janela interna: " + window.innerWidth); // Largura
+        console.log("Altura da janela interna: " + window.innerHeight); // Altura
+        console.log("Largura da janela externa: " + window.outerWidth); // Largura com a barra de tarefas
+        console.log("Altura da janela externa: " + window.outerHeight); // Altura com a barra de tarefas
+
+        
+        // Redimencionar e mover a tela
+        // window.resizeTo(700, 500); // largura, altura
+        // window.moveTo(100, 100); // x, y
+
+
+
+        // SCREEN
+        //
+        console.log(screen); // Informações sobre a tela
+        console.log("Largura da tela: " + screen.width);
+        console.log("Altura da tela: " + screen.height);
+        console.log("Largura disponível da tela: " + screen.availWidth);
+        console.log("Altura disponível da tela: " + screen.availHeight);
+        console.log("Profundidade de cor: " + screen.colorDepth);
+        
+
+    </script>
+    
+</body>
+</html>

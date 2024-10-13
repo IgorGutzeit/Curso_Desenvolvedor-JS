@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const xmlString = /*xml*/`
+        <clientes>
+            <cliente>
+                <nome>Igor</nome>
+                <idade>25</idade>
+            </cliente>
+            <cliente>
+                <nome>Maria</nome>
+                <idade>30</idade>
+            </cliente>
+        </clientes>
+        `;
+
+        
+         // Convertendo a string XML em um documento XML
+         function parseXml(xmlString) {
+
+            // Criando um objeto DOMParser para poder acessar as propriedades da biblioteca e passando a string XML para a variável "xmlDocument" (Documento XML) para poder ser manipulada
+            const parser = new DOMParser();
+            const xmlDocument = parser.parseFromString(xmlString, 'text/xml');
+            return xmlDocument;
+        };
+
+
+        // Transformando o documento XML em um objeto
+        function xmlToObject(xmlDoc) {
+
+            const clientes = xmlDoc.querySelectorAll('cliente');
+            const clientesList = [];
+            for (let cliente of clientes) {
+                const nome = cliente.querySelector('nome').textContent;
+                const idade = cliente.querySelector('idade').textContent;
+                clientesList.push({ nome, idade }); // Criando os objetos e povoando o vetor clientesList com os dados da lista "clientes"
+                // clientesList.push({ nome: nome, idade: idade }); // -> Exemplo para um melhor entendimento da criação dos objetos
+            }
+            
+            return clientesList; // Retornando o Array com os objetos criados
+        };
+
+        
+        // Adicionando um novo cliente ao documento XML
+        function adicionarCliente(xmlDocument, cliente) {
+            const novoCliente = xmlDocument.createElement('cliente');
+            novoCliente.innerHTML = `
+                <nome>${cliente.nome}</nome>
+                <idade>${cliente.idade}</idade>
+            `;
+            xmlDocument.querySelector('clientes').appendChild(novoCliente);
+        };
+
+
+        // Removendo um cliente do documento XML
+        function removerCliente(xmlDocument, nome) {
+            const clientes = xmlDocument.querySelectorAll('cliente');
+            for (let cliente of clientes) {
+                if (cliente.querySelector('nome').textContent === nome) {
+                    // Removendo o cliente
+                    cliente.remove();
+                    // break; // Usando o "break;" para que seja removido apenas um registro e não todos os registros que satisfaçam a regra
+                };
+            };
+        };
+
+
+        // Convertendo XML para string
+        function xmlToString(xmlDocument) {
+            const serializer = new XMLSerializer();
+            const xmlString = serializer.serializeToString(xmlDocument);
+            return xmlString;
+        };
+
+
+        const xmlDocument = parseXml(xmlString);
+        const clientesList = xmlToObject(xmlDocument);
+        console.log(clientesList);
+        adicionarCliente(xmlDocument, {nome: 'José', idade: 35});
+        removerCliente(xmlDocument, 'Maria');
+        console.log(xmlDocument);
+        console.log(xmlToString(xmlDocument));
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location e History</title>
+</head>
+
+<body>
+
+    <button onclick="trocarHref()"> Trocar Href </button>
+    <button onclick="fazerAssign()"> Assign </button>
+    <button onclick="fazerReplace()"> Replace </button>
+    <button onclick="fazerReload()"> Reload </button>
+    </br>
+    </br>
+
+    <button onclick="navegarPeloHistorico(1)"> Proxima pagina </button>
+    <button onclick="navegarPeloHistorico(-1)"> Pagina anterior </button>
+
+    <script>
+
+        console.log(location);
+
+        console.log(location.href); // URL completa
+        console.log(location.protocol); // http, https
+        console.log(location.host); // pega o host e a porta
+        console.log(location.hostname); // pega somento o host
+        console.log(location.port); // pega a porta
+        console.log(location.pathname); // pega o caminho (que vem depois do host)
+        console.log(location.search); // pega a query string (que vem depois do caminho)
+
+        function trocarHref() {
+            // Troca a pagina COM a opção de voltar
+            location.href = 'https://www.google.com.br';
+        };
+
+        function fazerAssign() {
+            // Troca a pagina COM a opção de voltar
+            location.assign('https://www.google.com.br');
+        };
+
+        function fazerReplace() {
+            // Substitui a pagina SEM a opção de voltar
+            location.replace('https://www.google.com.br');
+        };
+
+        function fazerReload() {
+            // Recarrega a pagina
+            location.reload();
+        };
+
+        function paginaAnterior() {
+            history.back();
+        };
+
+        function proximaPagina() {
+            history.forward();
+        };
+
+        function navegarPeloHistorico(n) {
+            history.go(n);
+        };
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h1>Login</h1>
+        <form>
+            <label for="username">Nome de Usuário</label>
+            <input type="text" id="username" name="username" autocomplete="off" required>
+
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password">
+
+            <button id="btn-login" onclick="login(event)">Login</button>
+
+        </form>
+    </div>
+
+    <script>
+
+        // const btnLogin = document.getElementById("btn-login"); // Obtendo o botão de login
+
+        // btnLogin.addEventListener("click", function () {
+
+        //     let nomeUser = document.getElementById("username").value;
+        //     let password = document.getElementById("password").value;
+
+
+        //     if (nomeUser == '') {
+        //         location.reload();
+        //         console.log("Pagina recarregada");
+        //     } else {
+        //         localStorage.setItem('nome', nomeUser);
+        //         localStorage.setItem('password', password);
+
+        //         console.log(localStorage.getItem('nome'));
+        //         console.log(localStorage.getItem('password'));
+
+        //         window.location.href = 'welcome.html';
+        //     };
+
+        // }); // Código comentado pois o mesmo está tendo a sua execução impedida
+
+        function login(event) {
+            event.preventDefault();
+
+            let nomeUser = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            if (nomeUser == '') {
+                location.reload();
+                alert("Por favor, insira seu nome de usuário e senha.");
+                console.log("Pagina recarregada");
+            } else {
+                localStorage.setItem('nome', nomeUser);
+                localStorage.setItem('password', password);
+                localStorage.setItem('loginTime', new Date().getTime()); // Settando o tempo de login
+
+                console.log(localStorage.getItem('nome'));
+                console.log(localStorage.getItem('password'));
+
+                window.location.href = 'welcome.html';
+            };
+
+        };
+
+    </script>
+
+</body>
+
+</html>
