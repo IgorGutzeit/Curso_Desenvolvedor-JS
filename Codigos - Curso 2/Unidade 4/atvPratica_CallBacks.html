@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atv. Pratica - CallBacks</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        let numero1 = parseInt(prompt("Digite o primeiro número: "));
+        let numero2 = parseInt(prompt("Digite o segundo número: "));
+        let op = parseInt(prompt("Agora escolha como deve ser exibido o resultado da operação: 1-Console 2-Janela 3-Documento"));
+
+        switch (op) {
+            case 1:
+                somarExibir(numero1,numero2, console.log);
+                break;
+            case 2:
+                somarExibir(numero1,numero2, window.alert);
+                break;
+            case 3:
+                somarExibir(numero1,numero2, (resultado) => {document.write(resultado);});
+                break;
+        };
+
+        function somarExibir(num1, num2, callback) {
+            let resultado = num1 + num2;
+            callback("O resultado da soma é: " + resultado);
+        };
+    </script>
+</body>
+
+</html>
